@@ -9,11 +9,10 @@ extern "C" void show(const char* s){
 
 //extern "C" suppresses mangling, so overloading can't be performed
 //error: conflicting declaration of C function ‘void show(double)’
-/*
-extern "C" void show(double d){
-    printf("%lf\n", d);
-};
-*/
+
+// extern "C" void show(double d){
+//     printf("%lf\n", d);
+// };
 
 //without extern "C", we can do overloading
 void show(int i){

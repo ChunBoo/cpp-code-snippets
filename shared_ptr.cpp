@@ -14,7 +14,8 @@ private:
 int main(){
     Rectangle* rectp = new Rectangle(5, 3);
     std::shared_ptr<Rectangle> rectsp1(rectp);
-    std::shared_ptr<Rectangle> rectsp2(rectp);
+    // std::shared_ptr<Rectangle> rectsp2(rectp);  //bad here ,double dtor 
+    std::shared_ptr<Rectangle> rectsp2=rectsp1;
     //rectsp1.reset(rectp);
     std::cout << rectsp1->getArea() << std::endl;
     return 0;
